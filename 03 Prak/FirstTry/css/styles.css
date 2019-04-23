@@ -9,7 +9,7 @@
   --secBlue: #2C3E50;
   --primBC: #34495E;
   --primTC: #000000;
-  --backgrey: #d3d3d3;
+  --backgrey: #ECF0F1;
 }
 
 @font-face {
@@ -66,6 +66,9 @@
   font-family: 'Roboto-ThinItalic';
   src: url('../font/Roboto-ThinItalic.ttf') format('truetype');
 }
+body{
+  background-color: var(--backgrey);
+}
 
 .navbar {
   display: flex;
@@ -91,7 +94,8 @@
   align-items: flex-start;
   flex: 15%;
   background-color: var(--primBC);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .content-area {

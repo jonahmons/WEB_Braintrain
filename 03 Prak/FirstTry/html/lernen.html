@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lernen</title>
+  <link rel="stylesheet" type="text/css" href="../css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="../img/Logo/Logo.svg" width="50rem" height=auto>
+        <h2 class="brain">Brain</h2>
+        <h2 class="train">Train</h2>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button lernenButton" href="edit.html">
+              <strong>Neue Karte</strong>
+            </a>
+            <div>
+              <div>
+                <a class="profileName">
+                  Max Mustermann
+                </a>
+              </div>
+              <div>
+                <a class="logout" href="startpage.html">
+                  Logout
+                </a>
+              </div>
+            </div>
+            <div>
+              <a class="navbar-item" href="#">
+                <img src="../img/Icons/Mein-Profil.svg" width="50rem" height=auto>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main-area">
+    <div class="navigation-area">
+      <li style="min-height: 6vh">
+      </li>
+      <li class="thinWhiteBorder">
+        <a href="startpage.html">
+          <span class="icon"><img src="../img/Icons/Home.svg" aria-hidden="true"></></span>
+          <span class="sideMenu">Home</span>
+        </a>
+      </li>
+      <li class="thinWhiteBorder">
+        <a href="karteikaesten.html">
+          <span class="icon"><img src="../img/Icons/Karteikasten.svg" aria-hidden="true"></></span>
+          <span class="sideMenu">Karteikarten</span>
+          <span class="badge">22</span>
+        </a>
+      </li>
+      <li class="thinWhiteBorder">
+        <a href="meineKarteikaesten.html">
+          <span class="icon"><img src="../img/Icons/Meine-Karteien.svg" aria-hidden="true"></></span>
+          <span class="sideMenu">Meine Karteikästen</span>
+          <span class="badge">2</span>
+        </a>
+      </li>
+      <li class="thinWhiteBorder">
+        <a href="meinProfil.html">
+          <span class="icon"><img src="../img/Icons/Mein-Profil.svg" aria-hidden="true"></></span>
+          <span class="sideMenu">Mein Profil</span>
+        </a>
+      </li>
+    </div>
+    <div class="content-area backgroundContent">
+      <div class="container">
+        <h1 class="topText">Lernen</h1>
+        <h2 class="text">Hier wird dir zufällig eine Karte aus der gewählten Kartei angezeigt.</h2>
+        <div class="columns editColorHead">
+          <div class="column is-one-quarter editText">
+            <h3>Name</h3>
+            <h3 class="textBold">Geometrie</h3>
+          </div>
+          <div class="column is-one-quarter editText">
+            <h3>Kategorie</h3>
+            <!--&#9656-->
+            <h3 class="textBold">Naturwissenschaften Mathematik</h3>
+          </div>
+          <div class="column is-1 editText">
+            <h3>Fortschritt</h3>
+            <h3 class="textBold">0 %</h3>
+          </div>
+          <div class="column is-1 editText">
+            <div class="columns">
+              <div class="column is-narrow">
+                <h3>Wiederholung</h3>
+                <h3>Karten</h3>
+              </div>
+              <div class="column is-narrow">
+                <h3>0</h3>
+                <h3>5</h3>
+              </div>
+              <div class="column is-narrow">
+                <h3>1</h3>
+                <h3>6</h3>
+              </div>
+              <div class="column is-narrow">
+                <h3>2</h3>
+                <h3>2</h3>
+              </div>
+              <div class="column is-narrow">
+                <h3>3</h3>
+                <h3>1</h3>
+              </div>
+              <div class="column is-narrow">
+                <h3>4</h3>
+                <h3>0</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" distanceAndColor">
+          <h2 class="textBold">Allgemeine Daten</h2>
+          <div class="columns">
+            <div class="column is-2 textBold has-text-right">Titel</div>
+            <div class="column">
+              <p class="textBold">Titel der Karte</p>
+            </div>
+            <div class="column field is-horizontal">
+              <div class="distanceHex">
+                <div class="hexagonBlack">
+                  <div>
+                    <div class="hexTextBoldSolo has-text-centered">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="distanceHex">
+                <div class="hexagon">
+                  <div>
+                    <div class="hexTextBoldSolo has-text-centered">1</div>
+                  </div>
+                </div>
+              </div>
+              <div class="distanceHex">
+                <div class="hexagonBlack">
+                  <div>
+                    <div class="hexTextBoldSolo has-text-centered">2</div>
+                  </div>
+                </div>
+              </div>
+              <div class="distanceHex">
+                <div class="hexagonBlack">
+                  <div>
+                    <div class="hexTextBoldSolo has-text-centered">3</div>
+                  </div>
+                </div>
+              </div>
+              <div class="distanceHex">
+                <div class="hexagonBlack">
+                  <div>
+                    <div class="hexTextBoldSolo has-text-centered">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns ">
+            <div class="column is-2 textBold has-text-right">Frage</div>
+            <div class="column">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis
+                aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-2 textBold has-text-right">Antwort</div>
+            <div class="column">
+              <div class="field horizontal has-text-centered ">
+                <a class="button lernenButton is-large" href="lernen2.html">
+                  <strong>Aufdecken</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="field horizontal has-text-right ">
+            <a class="button lernenButton" href="">
+              <strong>Überspringen</strong>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

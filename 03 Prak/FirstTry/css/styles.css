@@ -246,6 +246,10 @@
 .backgroundContent {
   background-color: var(--backgrey);
 }
+.distance{
+  margin-left: 200px;
+  margin-right: 200px;
+}
 
 .right {
   float: right;

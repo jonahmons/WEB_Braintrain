@@ -1,0 +1,105 @@
+{{ define "content"}}
+<div class="container">
+  <h1 class="topText">Kartei anschauen</h1>
+  <h2 class="text">Hier kannst du dir eine beliebige Kartei anschauen ohne sie zu bearbeiten.</h2>
+
+
+  <div class="columns editColorHead">
+    {{range .KarteikastenInfo}}
+    <div class="column is-one-quarter editText">
+      <h3>Name</h3>
+      <h3 class="textBold">{{ .Name}}</h3>
+    </div>
+    <div class="column is-one-quarter editText">
+      <h3>Kategorie</h3>
+      <h3 class="textBold">{{ .Oberkategorie}} &#9656; {{ .Unterkategorie}}</h3>
+    </div>
+    <div class="column is-one-quarter editText">
+      <h3>erstellt von</h3>
+      <h3 class="textBold">{{ .Ersteller}}</h3>
+    </div>
+    {{end}}
+    {{range .Fortschritt}}
+    <div class="column is-one-quarter editText">
+      <h3>Fortschritt</h3>
+      <h3 class="textBold"> {{ .Fortschrittgesamt}} %</h3>
+    </div>
+    {{end}}
+  </div>
+
+
+  <div class="columns">
+    <div class="column is-one-quarter">
+      {{ range .Karteikarten}}
+      <div class=" {{if eq .Position 1}}editColorTopFirst{{else}} editColor {{end}} minHeigth">
+        <div>
+          <h3># {{ .Position}}</h3>
+          <h1 class="textBold">{{ .KarteikartenName}}</h1>
+        </div>
+      </div>
+      {{end}}
+    </div>
+
+    {{ range .EinzelneKarteikarte}}
+    <div class="column editColor">
+      <div class="columns">
+        <div class="column is-2 textBold has-text-right">Titel</div>
+
+        <div class="column">
+          <p class="textBold">{{ .KarteikartenName}}</p>
+        </div>
+        <div class="column field is-horizontal">
+          <div class="distanceHex">
+            <div class="hexagonBlack">
+              <div>
+                <div class="hexTextBoldSolo has-text-centered">0</div>
+              </div>
+            </div>
+          </div>
+          <div class="distanceHex">
+            <div class="hexagon">
+              <div>
+                <div class="hexTextBoldSolo has-text-centered">1</div>
+              </div>
+            </div>
+          </div>
+          <div class="distanceHex">
+            <div class="hexagonBlack">
+              <div>
+                <div class="hexTextBoldSolo has-text-centered">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="distanceHex">
+            <div class="hexagonBlack">
+              <div>
+                <div class="hexTextBoldSolo has-text-centered">3</div>
+              </div>
+            </div>
+          </div>
+          <div class="distanceHex">
+            <div class="hexagonBlack">
+              <div>
+                <div class="hexTextBoldSolo has-text-centered">4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns ">
+        <div class="column is-2 textBold has-text-right">Frage</div>
+        <div class="column">
+          <p>{{ .Frage}}</p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-2 textBold has-text-right">Antwort</div>
+        <div class="column">
+          <p>{{ .Antwort}}</p>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{ end}}

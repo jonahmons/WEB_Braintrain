@@ -1,0 +1,32 @@
+{{define "top"}}
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/img/Logo/Logo.svg" width="50rem" height=auto>
+      <h2 class="brain">Brain</h2>
+      <h2 class="train">Train</h2>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="control">
+          <input class="input is-primary" type="text" placeholder="Nutzername">
+        </div>
+        <div class="control">
+          <input class="input is-primary" type="password" placeholder="Passwort">
+        </div>
+        <div class="buttons">
+          <a href="/loggedin"class="button lernenButton">
+            <strong>Login</strong>
+          </a>
+          <a href="/register" style="color: white; padding-bottom: 8px">
+            Registrieren
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ end }}

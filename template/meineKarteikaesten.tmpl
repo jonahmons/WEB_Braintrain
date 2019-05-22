@@ -1,0 +1,127 @@
+{{define "content"}}
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <h1 class="topText">Meine Karteikästen</h1>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-half">
+      <h2 class="text">Hier findest du alle deine Karteien, sowie öffentliche Karteien, die du angefangen hast zu lernen</h2>
+    </div>
+    <div class="column has-text-right">
+      <div class="field is-horizontal right">
+        <span class="control thinBlackBorder select">
+          <select>
+            <option>Sortieren nach ...</option>
+            <option>Name aufwärts</option>
+            <option>Name abwärts</option>
+            <option>Karten aufwärts</option>
+            <option>Karten abwärts</option>
+          </select>
+        </span>
+        <span class="control thinBlackBorder">
+          <input class="input is-primary" type="text" placeholder="Suche">
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kateikaestenKategorie">Selbst erstellte Karteikästen</div>
+  <div class="columns is-multiline">
+
+    {{range .EigenKarteiKaesten}}
+    <div class="column is-one-quarter">
+      <article class="message ">
+        <div class="message-header messageHeadColor">
+          <p>{{ .Kategorie}} &#9656; {{ .Unterkategorie}}</p>
+        </div>
+        <div class="message-body">
+
+          <div class="field is-horizontal">
+            <div class="messageTitel">
+              <a href="/karteikaesten/view" style="text-decoration: none">{{ .Name}}</a>
+            </div>
+            <div>
+              <div class="hexagon">
+                <div>
+                  <div class="hexTextBold has-text-centered">{{ .AnzahlKarten}}</div>
+                  <div class="hexText has-text-centered">Karteien</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div> {{ .Beschreibung}}</div>
+          <div class="columns">
+            <div class="column is-half ">
+              <h3 class="text">Sichtbarkeit:</h3>
+            </div>
+            <div class="column is-half has-text-right">
+              <h3 class="textBold">{{ .Sichtbarkeit}}</h3>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-half ">
+              <h3 class="text">Fortschritt:</h3>
+            </div>
+            <div class="column is-half has-text-right">
+              <h3 class="textBold">78%</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a class="button is-warning" style="border-radius: 0px" href="/karteikaesten/lern">
+            <strong>Lernen</strong>
+          </a>
+          <a class="button is-success" style="border-radius: 0px" href="">
+            <strong>Bearbeiten</strong>
+          </a>
+          <a class="button is-danger" style="border-radius: 0px" href="">
+            <span class="icon">
+              <i class="fa fa-trash-o" style="font-size:24px"></i>
+            </span>
+          </a>
+        </div>
+
+      </article>
+    </div>
+
+    {{end}}
+  </div>
+  <div class="kateikaestenKategorie">Gelernte Karteikästen anderer Nutzer</div>
+  <div class="columns is-multiline">
+    {{range .AndereKarteiKaesten}}
+    <div class="column is-one-quarter">
+      <article class="message ">
+        <div class="message-header messageHeadColor">
+          <p>{{ .Kategorie}} &#9656; {{ .Unterkategorie}}</p>
+        </div>
+        <div class="message-body">
+          <div class="field is-horizontal">
+            <div class="messageTitel">
+              <a href="/karteikaesten/view" style="text-decoration: none">{{ .Name}}</a>
+            </div>
+            <div>
+              <div class="hexagon">
+                <div>
+                  <div class="hexTextBold has-text-centered">{{ .AnzahlKarten}}</div>
+                  <div class="hexText has-text-centered">Karteien</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>{{ .Beschreibung}}</div>
+          <div class="has-text-centered">
+            <a class="button is-warning" style="border-radius: 0px" href="/karteikaesten/lern">
+              <strong>Lernen</strong>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+    {{end}}
+  </div>
+</div>
+
+{{ end }}

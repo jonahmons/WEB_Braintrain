@@ -1,0 +1,118 @@
+{{define "content"}}
+<div class="container">
+  <h1 class="topText">Lernen</h1>
+  <h2 class="text">Hier wird dir zufällig eine Karte aus der gewählten Kartei angezeigt.</h2>
+  <div class="columns editColorHead">
+    {{range .KarteikastenInfo}}
+    <div class="column is-one-quarter editText">
+      <h3>Name</h3>
+      <h3 class="textBold">{{ .Name}}</h3>
+    </div>
+    <div class="column is-one-quarter editText">
+      <h3>Kategorie</h3>
+      <h3 class="textBold">{{ .Oberkategorie}} &#9656; {{ .Unterkategorie}}</h3>
+    </div>
+    <div class="column is-1 editText">
+      <h3>Fortschritt</h3>
+      <h3 class="textBold">0 %</h3>
+    </div>
+    <div class="column is-1 editText">
+      <div class="columns">
+        <div class="column is-narrow">
+          <h3>Wiederholung</h3>
+          <h3>Karten</h3>
+        </div>
+        <div class="column is-narrow">
+          <h3>0</h3>
+          <h3>5</h3>
+        </div>
+        <div class="column is-narrow">
+          <h3>1</h3>
+          <h3>6</h3>
+        </div>
+        <div class="column is-narrow">
+          <h3>2</h3>
+          <h3>2</h3>
+        </div>
+        <div class="column is-narrow">
+          <h3>3</h3>
+          <h3>1</h3>
+        </div>
+        <div class="column is-narrow">
+          <h3>4</h3>
+          <h3>0</h3>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+  <div class=" distanceAndColor">
+    {{ range .Karteikarte}}
+    <div class="columns">
+      <div class="column is-2 textBold has-text-right">Titel</div>
+      <div class="column">
+        <p class="textBold">{{ .KarteikartenName}}</p>
+      </div>
+      <div class="column field is-horizontal">
+        <div class="distanceHex">
+          <div class="hexagonBlack">
+            <div>
+              <div class="hexTextBoldSolo has-text-centered">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="distanceHex">
+          <div class="hexagon">
+            <div>
+              <div class="hexTextBoldSolo has-text-centered">1</div>
+            </div>
+          </div>
+        </div>
+        <div class="distanceHex">
+          <div class="hexagonBlack">
+            <div>
+              <div class="hexTextBoldSolo has-text-centered">2</div>
+            </div>
+          </div>
+        </div>
+        <div class="distanceHex">
+          <div class="hexagonBlack">
+            <div>
+              <div class="hexTextBoldSolo has-text-centered">3</div>
+            </div>
+          </div>
+        </div>
+        <div class="distanceHex">
+          <div class="hexagonBlack">
+            <div>
+              <div class="hexTextBoldSolo has-text-centered">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns ">
+      <div class="column is-2 textBold has-text-right">Frage</div>
+      <div class="column">
+        <p>{{ .Frage}}</p>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 textBold has-text-right">Antwort</div>
+      <div class="column">
+        <div class="field horizontal has-text-centered ">
+          <a class="button lernenButton is-large" href="/karteikaesten/lern2">
+            <strong>Aufdecken</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="field horizontal has-text-right ">
+      <a class="button lernenButton" href="">
+        <strong>Überspringen</strong>
+      </a>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{ end }}

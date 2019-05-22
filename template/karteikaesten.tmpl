@@ -1,0 +1,62 @@
+{{ define "content"}}
+<div class="container">
+  <h1 class="topText">Karteikästen</h1>
+
+  <div class="columns">
+    <div class="column is-half">
+      <h2 class="text">Im Karteikasten findest du alle öffentlichen Karteien.</h2>
+    </div>
+    <div class="column has-text-right">
+      <div class="field is-horizontal right">
+        <span class="control thinBlackBorder select">
+          <select>
+            <option>Sortieren nach ...</option>
+            <option>Name aufwärts</option>
+            <option>Name abwärts</option>
+            <option>Karten aufwärts</option>
+            <option>Karten abwärts</option>
+          </select>
+        </span>
+        <span class="control thinBlackBorder">
+          <input class="input is-primary" type="text" placeholder="Suche">
+        </span>
+      </div>
+    </div>
+  </div>
+  {{ range .Kategorien}}
+  <div class="kateikaestenKategorie">{{ .Name}}</div>
+  <div class="columns is-multiline">
+    {{range .Karteikaesten}}
+    <div class="column is-one-quarter">
+      <article class="message ">
+        <div class="message-header messageHeadColor">
+          <p>{{ .Unterkategorie}}</p>
+        </div>
+        <div class="message-body">
+
+          <div class="field is-horizontal">
+            <div class="messageTitel">
+              <a href="/karteikaesten/view?id={{ .ID}}" style="text-decoration: none">{{ .Name}}</a>
+            </div>
+            <div>
+              <div class="hexagon">
+                <div>
+                  <div class="hexTextBold has-text-centered">{{ .AnzahlKarten}}</div>
+                  <div class="hexText has-text-centered">Karteien</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>{{ .Beschreibung}}</div>
+          <div class="has-text-centered">
+            <a class="button is-warning" style="border-radius: 0px" href="/karteikaesten/lern?id={{ .ID}}">
+              <strong>Lernen</strong>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+    {{end}}
+    {{end}}
+</div>
+{{ end }}

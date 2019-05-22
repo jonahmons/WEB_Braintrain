@@ -1,0 +1,40 @@
+{{define "top"}}
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/img/Logo/Logo.svg" width="50rem" height=auto>
+      <h2 class="brain">Brain</h2>
+      <h2 class="train">Train</h2>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button lernenButton" href="/karteikaesten/edit">
+            <strong>Neue Karte</strong>
+          </a>
+          <div>
+            <div>
+              <a class="profileName">
+                {{ .Username}}
+              </a>
+            </div>
+            <div>
+              <a class="logout" href="/logout">
+                Logout
+              </a>
+            </div>
+          </div>
+          <div>
+            <a class="navbar-item" href="/profil">
+              <img src="/img/Icons/Mein-Profil.svg" width="50rem" height=auto>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+{{ end }}

@@ -1,0 +1,85 @@
+{{ define "content" }}
+  <div class="container">
+    <h1 class="registrierenContentHeadline">Registrieren</h1>
+    <div>
+      <h2>Wir freuen uns, dass du dich bei BrainTrain anmelden möchtest. Bitte beachte, dass pro E-Mail Adresse nur ein Nutzer erstelert werden kann und jeder Nutztername nur einmal vergeben wird.</h2>
+      <form method="POST" action="/meineKarteikaesten">
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter has-text-right regBezeichnung ">
+          Name
+        </div>
+        <div class="column is-one-quarter">
+          <input class="input is-primary" type="text" placeholder="maxmustermann" required>
+        </div>
+        <div class="column is-one-quarter thinRedBorder">
+          Warning
+        </div>
+      </div>
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter has-text-right regBezeichnung">
+          E-Mail
+        </div>
+        <div class="column is-one-quarter">
+          <input class="input is-primary" type="text" placeholder="muster@example.de" required>
+        </div>
+        <div class="column is-one-quarter thinRedBorder">
+          Warning
+        </div>
+      </div>
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter has-text-right regBezeichnung">
+          Passwort
+        </div>
+        <div class="column is-one-quarter">
+          <input id="password" class="input is-primary" type="password" placeholder="Passwort" required>
+        </div>
+        <div class="column is-one-quarter thinRedBorder">
+
+        </div>
+      </div>
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter has-text-right regBezeichnung">
+          Passwortwiederholen
+        </div>
+        <div class="column is-one-quarter">
+          <input id="confirm_password" class="input is-primary" type="password" placeholder="Passwort" required>
+        </div>
+        <div id= "password_message" class="column is-one-quarter thinRedBorder is-invisible">
+          Warning
+        </div>
+      </div>
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter regBezeichnung ">
+
+        </div>
+        <div class="column is-one-quarter ">
+          <div class="field is-horizontal">
+            <label><input type="checkbox" name="personality"></label>
+            <p>Ich habe die nicht vorhandene Datenschutz- <br />
+              erklärung zur Kenntnis genommen.
+            </p>
+          </div>
+        </div>
+        <div class="column is-one-quarter thinRedBorder">
+          Warning
+        </div>
+      </div>
+      <div class="columns is-gapless is-multiline">
+        <div class="column is-one-quarter regBezeichnung ">
+
+        </div>
+        <div class="column is-one-quarter">
+          <div class="buttons">
+            <button type="submit" class="button is-warning" style="border-radius: 0px" >
+              <strong>Registrieren</strong>
+            </button>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,31 @@
+{{define "karteikasten"}}
+<div class="column is-one-quarter">
+  <article class="message ">
+    <div class="message-header messageHeadColor">
+      <p>{{ .Kategorie}}</p>
+    </div>
+    <div class="message-body">
+
+      <div class="field is-horizontal">
+        <div class="messageTitel">
+          <a href="/karteikaesten/view" style="text-decoration: none">{{Titel}}</a>
+        </div>
+        <div>
+          <div class="hexagon">
+            <div>
+              <div class="hexTextBold has-text-centered">{Anzahl}</div>
+              <div class="hexText has-text-centered">Karteien</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>{{ .Beschreibung}}</div>
+      <div class="has-text-centered">
+        <a class="button is-warning" style="border-radius: 0px" href="/karteikaesten/lern">
+          <strong>Lernen</strong>
+        </a>
+      </div>
+    </div>
+  </article>
+</div>
+{{ end }}
